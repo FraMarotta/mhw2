@@ -24,12 +24,14 @@ function resetQuiz(){
 
 }
 function chooseResult(){
-    if(userAnswers.one === userAnswers.two || userAnswers.one === userAnswers.three)
-        return userAnswers.one;
-    if(userAnswers.two === userAnswers.one || userAnswers.two === userAnswers.three)
+    /*
+        one = two 1
+        one = three 1
+        two = three 2
+        else 1
+    */
+    if(userAnswers.two === userAnswers.three)
         return userAnswers.two;
-    if(userAnswers.three === userAnswers.one || userAnswers.three === userAnswers.two)
-        return userAnswers.three;
     return userAnswers.one;
 }
 
